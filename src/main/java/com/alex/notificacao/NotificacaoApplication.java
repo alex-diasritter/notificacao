@@ -1,5 +1,4 @@
 package com.alex.notificacao;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
