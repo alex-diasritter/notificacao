@@ -6,6 +6,7 @@ public class Proposta {
     private Double valorSolicitado;
     private int prazoPagamento;
     private Boolean aprovada;
+    private boolean integrada;
     private String obs;
     private Usuario usuario;
 
@@ -37,6 +38,14 @@ public class Proposta {
 
     public void setAprovada(Boolean aprovada) {
         this.aprovada = aprovada;
+    }
+
+    public boolean isIntegrada() {
+        return integrada;
+    }
+
+    public void setIntegrada(boolean integrada) {
+        this.integrada = integrada;
     }
 
     public String getObs() {
