@@ -2,6 +2,7 @@ package com.alex.notificacao.config;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Profile;
 import software.amazon.awssdk.auth.credentials.AwsBasicCredentials;
 import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
@@ -20,7 +21,7 @@ public class AmazonSNSConfiguration {
     @Bean
     public SnsClient snsClient() {
         return SnsClient.builder()
-                .region(Region.of(this.region)) // Adicionei a região, que é obrigatória
+                .region(Region.of(this.region))
                 .credentialsProvider(StaticCredentialsProvider.create(
                         AwsBasicCredentials.create(this.accessKey, this.secretKey)
                 ))
